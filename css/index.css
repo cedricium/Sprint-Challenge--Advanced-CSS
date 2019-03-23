@@ -249,6 +249,15 @@ footer {
   color: #F6F7F8;
   background: #22283A;
 }
+.home .walk .walk-text .btn:hover {
+  cursor: pointer;
+  font-size: 1.8rem;
+  border-radius: 0.5rem;
+  width: 11rem;
+  padding: 1rem 2rem;
+  color: #22283A;
+  background: #F6F7F8;
+}
 .home .walk .walk-img {
   width: 46%;
   margin-left: 4%;
