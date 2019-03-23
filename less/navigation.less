@@ -1,9 +1,6 @@
 // Navigation code here
 nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  .flex(@direction: column);
   padding: 1.4rem 0 1rem;
   background: @nav-bg;
   border-bottom: solid 2px @nav-border;
@@ -13,9 +10,7 @@ nav {
   }
 
   .nav-end {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    .flex(@justifyContent: space-evenly);
     width: 45rem;
 
     .link {

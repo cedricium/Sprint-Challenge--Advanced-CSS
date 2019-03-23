@@ -8,8 +8,11 @@
   background: @bgColor;
 }
 
-.flex(@direction; @justifyContent; @alignItems) {
-
+.flex(@direction: row; @justifyContent: center; @alignItems: center) {
+  display: flex;
+  flex-direction: @direction;
+  justify-content: @justifyContent;
+  align-items: @alignItems;
 }
 
 .responsive(@mediaQuery; @rules) {
