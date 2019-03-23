@@ -1,5 +1,6 @@
 // Mixins Here
-.button(@width: auto; @padding; @textColor; @bgColor) {
+.button(@width: auto; @padding: auto; @textColor: auto; @bgColor: auto) {
+  .flex();
   font-size: 1.8rem;
   border-radius: 0.5rem;
   width: @width;
@@ -15,6 +16,8 @@
   align-items: @alignItems;
 }
 
-.responsive(@mediaQuery; @rules) {
-
+.responsive(@breakpoint: @phone; @rules) {
+  @media (@breakpoint) {
+    @rules();
+  }
 }
