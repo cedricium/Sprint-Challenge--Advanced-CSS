@@ -1,1 +1,30 @@
 // Navigation code here
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.95;
+  .flex(@direction: column);
+  padding: 1.4rem 0 1rem;
+  background: @nav-bg;
+  border-bottom: solid 2px @nav-border;
+
+  .nav-start {
+    margin-bottom: 2rem;
+  }
+
+  .nav-end {
+    .flex(@justifyContent: space-evenly);
+    width: 45rem;
+    .responsive(@rules: {
+      width: 100%;
+    });
+
+    .link {
+      font-size: 1.6rem;
+      text-decoration: none;
+      color: @nav-font;
+    }
+  }
+}

@@ -1,8 +1,15 @@
 // Home Content
 
 .home {
+  margin-top: 10rem;
 
   .intro {
+    .img-wrapper {
+      img {
+        max-width: 100%;
+        border-radius: 0.5rem;
+      }
+    }
 
     h2 {
       padding: 15px;
@@ -24,6 +31,19 @@
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+
+      &.blast {
+        .responsive(@rules: {
+          width: 100%;
+        });
+      }
+
+      &.sky,
+      &.launch {
+        .responsive(@rules: {
+          display: none;
+        });
+      }
     }
   }
 
@@ -45,9 +65,16 @@
     padding: 50px 60px;
     display: flex;
     justify-content: center;
+    .responsive(@rules: {
+      padding: 2rem;
+      flex-direction: column;
+    });
 
     .walk-text {
       width: 50%;
+      .responsive(@rules: {
+        width: 100%;
+      });
 
       h3 {
         margin-bottom: 10px;
@@ -58,12 +85,44 @@
       }
 
       .btn {
+        .button(11rem; 1rem 2rem; @porcelain; @btn-bg-color);
+        .responsive(@rules: {
+          .button(@width: 100%; @padding: 2.5rem 0);
+        });
+
+        &:hover {
+          cursor: pointer;
+          .button(11rem; 1rem 2rem; @btn-bg-color; @porcelain);
+        }
+      }
+    }
+
+    form {
+      width: 100%;
+      height: 10rem;
+      font-size: 1.6rem;
+      .flex(column, center, flex-end);
+
+      .field {
+        margin: 0 0 1rem;
+        width: 100%;
+        .flex(@justifyContent: flex-end);
+
+        input {
+          width: 60%;
+          margin-left: 1rem;
+        }
       }
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
+      .responsive(@rules: {
+        order: -1;
+        width: 100%;
+        margin: 0 0 2rem;
+      });
       
       img {
         width: 100%;

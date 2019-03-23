@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>SpaceWalkers</title>
 
@@ -17,11 +18,26 @@
 <body>
 
  <!-- navigation code here -->
+ <nav>
+   <div class="nav-start">
+     <h1 class="logo">SpaceWalkers</h1>
+   </div>
+   <div class="nav-end">
+     <a href="" class="link">Home</a>
+     <a href="" class="link">About Us</a>
+     <a href="" class="link">Blog</a>
+     <a href="" class="link">Contact</a>
+     <a href="" class="link">Sign In</a>
+   </div>
+ </nav>
 
   <div class="container home">
 
     <header class="intro">
        <!-- image code here -->
+       <div class="img-wrapper">
+         <img src="img/main-header.png" alt="Earth from space">
+       </div>
 
       <h2>Lift Off</h2>
     
@@ -50,6 +66,27 @@
         <p>The Earth was small, light blue, and so touchingly alone, our home that must be defended like a holy relic. The Earth was absolutely round.</p>
       
         <p>Suddenly struck me that that tiny pea, pretty and blue, was the Earth. I put up my thumb and shut one eye, and my thumb blotted out the planet Earth.</p>
+
+        <form action="">
+          <div class="field">
+            <label for="name">
+              Full Name
+            </label>
+            <input id="name" type="text" placeholder="Jon Snow">
+          </div>
+          <div class="field">
+            <label for="email">
+              Email
+            </label>
+            <input id="email" type="email" placeholder="jon.snow@got.com">
+          </div>
+          <div class="field">
+            <label for="phone">
+              Phone Number
+            </label>
+            <input id="phone" type="tel" placeholder="+1 (123) 456-7890">
+          </div>
+        </form>
       
         <div class="btn">
           Sign Up
